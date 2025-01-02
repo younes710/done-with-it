@@ -14,6 +14,7 @@ import AppButton from './components/AppButton';
 import WelcomeScreen from './screens/WelcomeScreen';
 import Card from './components/Card';
 import ListingDetailsScreen from './screens/ListingDetailsScreen';
+import ViewImageScreen from './screens/ViewImageScreen';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -60,7 +61,8 @@ export default function RootLayout() {
      subTitle='$900'
      image={require('../assets/images/sofa.jpg')}
     /> */}
-    <ListingDetailsScreen />
+    {/* <ListingDetailsScreen /> */}
+    <ViewImageScreen />
    </SafeAreaView>
   </ThemeProvider>
  );
