@@ -12,6 +12,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import { SafeAreaView, Text } from 'react-native';
 import AppButton from './components/AppButton';
 import WelcomeScreen from './screens/WelcomeScreen';
+import Card from './components/Card';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,14 +35,30 @@ export default function RootLayout() {
  return (
   <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
    <SafeAreaView
+    // style={{
+    //  flex: 1,
+    //  justifyContent: 'center',
+    //  alignItems: 'center',
+    // }}
     style={{
      flex: 1,
-     justifyContent: 'center',
-     alignItems: 'center',
+     backgroundColor: '#f8f4f4',
+     padding: 20,
+     paddingTop: 100,
     }}
    >
     {/* <AppButton title='login' onPress={() => console.log('Tapped')} /> */}
-    <WelcomeScreen />
+    {/* <WelcomeScreen /> */}
+    <Card
+     title='Jackets for sale !'
+     subTitle='$100'
+     image={require('../assets/images/jackets.jpg')}
+    />
+    <Card
+     title='Couch in great condition !'
+     subTitle='$900'
+     image={require('../assets/images/sofa.jpg')}
+    />
    </SafeAreaView>
   </ThemeProvider>
  );
