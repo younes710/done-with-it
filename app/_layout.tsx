@@ -13,6 +13,7 @@ import { SafeAreaView, Text } from 'react-native';
 import AppButton from './components/AppButton';
 import WelcomeScreen from './screens/WelcomeScreen';
 import Card from './components/Card';
+import ListingDetailsScreen from './screens/ListingDetailsScreen';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -35,21 +36,21 @@ export default function RootLayout() {
  return (
   <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
    <SafeAreaView
-    // style={{
-    //  flex: 1,
-    //  justifyContent: 'center',
-    //  alignItems: 'center',
-    // }}
-    style={{
-     flex: 1,
-     backgroundColor: '#f8f4f4',
-     padding: 20,
-     paddingTop: 100,
-    }}
+   // style={{
+   //  flex: 1,
+   //  justifyContent: 'center',
+   //  alignItems: 'center',
+   // }}
+   // style={{
+   //  flex: 1,
+   //  backgroundColor: '#f8f4f4',
+   //  padding: 20,
+   //  paddingTop: 100,
+   // }}
    >
     {/* <AppButton title='login' onPress={() => console.log('Tapped')} /> */}
     {/* <WelcomeScreen /> */}
-    <Card
+    {/* <Card
      title='Jackets for sale !'
      subTitle='$100'
      image={require('../assets/images/jackets.jpg')}
@@ -58,7 +59,8 @@ export default function RootLayout() {
      title='Couch in great condition !'
      subTitle='$900'
      image={require('../assets/images/sofa.jpg')}
-    />
+    /> */}
+    <ListingDetailsScreen />
    </SafeAreaView>
   </ThemeProvider>
  );
